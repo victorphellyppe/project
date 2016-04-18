@@ -1,0 +1,21 @@
+<fieldset>
+<form name="contato" method="post" action="#">
+<input name="nome" type="text" placeholder="Digite seu nome"/>
+<input name="email" type="text" placeholder="Digite seu email">
+<input name="assunto" type="text" placeholder="Digite o assunto"/>
+<textaarea rows="5" cols="30"name="msg"></textaarea>
+
+<input type="submit" name="enviar" value="Enviaar"/>
+</form>
+</fieldset>
+
+<?php 
+if(issuet($_POST['enviar']){
+	SESSION_START();
+	$_SESSION['nome']= $_POST['nome'];
+	$_SESSION['email']=$_POST['email'];
+	$_SESSION['assunto']=$_POST['assunto'];
+	$_SESSION['msg']=$_POST['msg'];
+}
+
+?>

@@ -1,0 +1,21 @@
+<?php 
+session_start();
+echo "sessão criada com sucesso!"
+?>
+<fieldset>
+<form name="contato" method="post" action="#">
+<input name="nome" type="text" placeholder="Digite seu nome"/><br>
+<input name="email" type="text" placeholder="Digite seu email"/><br>
+<input name="assunto" type="text" placeholder="Digite o assunto"/><br>
+<textarea rows="5" cols="30" name="msg" placeholder="Digite sua mensagem!"></textarea><br>
+<input type="submit" name="enviar" value="Enviar"/>
+</form>
+</fieldset>
+<?php
+session_destroy();
+echo "Dados enviados com sucesso, abaixo seguem os dados que você enviou.."
+$_SESSION["nome"] =  echo ($_POST["nome"];
+$_SESSION["email"] = echo ($_POST["email"];
+$_SESSION["assunto"] = echo ($_POST["assunto"];
+$_SESSION["msg"] = echo ($_POST["msg"];
+?>
